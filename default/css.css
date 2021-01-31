@@ -149,6 +149,7 @@ body {
 #log>div:nth-child(odd)>div {
     background-color: #77777733;
     border-bottom: 1px solid #FFFFFF55;
+    animation-direction: reverse;
 }
 
 #log .message,#log .meta {
