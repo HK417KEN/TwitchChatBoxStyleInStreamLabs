@@ -2,12 +2,11 @@
 document.addEventListener('onLoad', function(obj) {
 	// obj will be empty for chat widget
 	// this will fire only once when the widget loads
-  sendMessage();
+    sendMessage();
 });
 
 document.addEventListener('onEventReceived', function(obj) {
   	// obj will contain information about the event
-	  //console.log(obj);
     removeInvisibleMessage();
 });
 
@@ -23,17 +22,17 @@ let getTime = function () {
 }
 
 let sendMessage = function (msg) {
-  let defaultMessage = getTime();
+    let defaultMessage = getTime();
 
-  let newMessage = '<div class="chat-bigbox" data-from="HK417KEN" data-id="">';
-      newMessage += '<div class="chat-box">';
-      newMessage += '<span class="meta" style="color: rgb(30, 144, 255);">';
-      newMessage += '<span class="badges">';
-      newMessage += '<img src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1" class="badge broadcaster-icon"></span>';
-      newMessage += '<span class="name">HK417KEN</span></span><span class="message">';
-      newMessage += msg ? msg : defaultMessage;
-      newMessage += '</span></div></div>';
-  document.getElementById('log').innerHTML += newMessage;
+    let newMessage = '<div class="chat-bigbox" data-from="HK417KEN" data-id="">';
+        newMessage += '<div class="chat-box">';
+        newMessage += '<span class="meta" style="color: rgb(30, 144, 255);">';
+        newMessage += '<span class="badges">';
+        newMessage += '<img src="https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1" class="badge broadcaster-icon"></span>';
+        newMessage += '<span class="name">HK417KEN</span></span><span class="message">';
+        newMessage += msg ? msg : defaultMessage;
+        newMessage += '</span></div></div>';
+    document.getElementById('log').innerHTML += newMessage;
 }
 
 // optimize performance
